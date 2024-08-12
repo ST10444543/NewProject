@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to our website</title>
+    <title>Welcome message</title>
+
 </head>
 <body>
+    
+    <div id="welcome-message"></div>
+
+    <script>
+        // Create the welcome message
+        const message = "Welcome to our website! ";
+
+        // Create the sign-out link
+        const signOutLink = '<a href="#" id="sign-out">Sign Out</a>';
+
+        // Display the message and sign-out link in the div
+        document.getElementById('welcome-message').innerHTML = message + signOutLink;
+
+        // Add a click event listener to the sign-out link
+        document.getElementById('sign-out').addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent the default link action
+
+            // Redirect to the logout page
+            window.location.href = '/logout';  // Replace '/logout' with your actual logout page URL
+        });
+    </script>
     
 </body>
 </html>
